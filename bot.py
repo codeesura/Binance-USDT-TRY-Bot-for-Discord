@@ -3,6 +3,8 @@ from discord.ext import commands , tasks
 import requests
 import json
 import asyncio
+import config
+
 intents = discord.Intents.default()  
 client = commands.Bot(command_prefix = '$',intents=intents)
 
@@ -28,4 +30,4 @@ try :
 except :
     False
 
-client.run("bot-token")
+client.run(config.DISCORD_TOKEN)
